@@ -8,6 +8,8 @@ class MusicPlayer
     attr_accessor :playlists
 
     # Constructor
+    #
+    # @param csv_file the name of the optional csv file
     def initialize(csv_file = nil)
         # Initialize the songs here
         @songs = []

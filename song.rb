@@ -1,5 +1,6 @@
 # Song object
 class Song
+  include Comparable
   # Allows accessability for the name/location
   attr_accessor :name
   attr_accessor :location
@@ -18,5 +19,9 @@ class Song
   def play
     # Currently just puts a name later will want to play
     puts "Playing: #{name}"
+  end
+
+  def <=>(other)
+    self.name <=> other.name
   end
 end
